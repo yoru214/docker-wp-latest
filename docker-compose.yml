@@ -3,7 +3,9 @@ services:
   wordpress:
     depends_on:
       - db
-    image: wordpress:latest
+    build:
+      context: .
+      dockerfile: docker/wordpress/Dockerfile
     restart: always
     volumes:
       - ./wp-content:/var/www/html/wp-content 
@@ -12,6 +14,7 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
+    hostname: web.local
     ports:
       - 80:80 
       - 443:443
