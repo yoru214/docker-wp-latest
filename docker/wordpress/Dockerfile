@@ -1,6 +1,4 @@
-FROM wordpress:latest
-
-
+FROM wordpress:php7.4-apache
 
 # COPY apache configuration setting web.local as server name
 COPY ./docker/wordpress/apache/config/apache2.conf /etc/apache2/apache2.conf
@@ -9,12 +7,12 @@ COPY ./docker/wordpress/apache/config/site.conf /etc/apache2/sites-available/000
 # COPY apache configuration for web.local ssl file
 COPY ./docker/wordpress/apache/config/ssl.conf /etc/apache2/sites-available/default-ssl.conf
 
-
+# COPY all necessary documents for ssl
 COPY ./docker/wordpress/apache/ssl/domain.key /etc/ssl/domain.key
 COPY ./docker/wordpress/apache/ssl/domain.csr /etc/ssl/domain.csr
 COPY ./docker/wordpress/apache/ssl/domain.crt /etc/ssl/domain.crt
 COPY ./docker/wordpress/apache/ssl/domain.pem /etc/ssl/domain.pem
-
+# COPY Certificate
 COPY ./docker/wordpress/apache/certs/weblocal.crt /etc/certs/weblocal.crt
 
 
