@@ -1,2 +1,6 @@
 db_data/*
 wp-content/*
+
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/wpinit.php
