@@ -1,6 +1,13 @@
 db_data/*
 wp-content/*
-
+# exclude elementor
 !/wp-content/plugins/
 /wp-content/plugins/*
 !/wp-content/plugins/wpinit.php
+!/wp-content/plugins/elementor
+
+# exclude generate pres
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/generatepress
+!/wp-content/themes/generatepress-child
