@@ -1,0 +1,10 @@
+/*
+Theme Name: GeneratePress Child Theme for Elementor Enabled Sites
+Theme URI: https://github.com/yoru214/docker-wp-latest/tree/elementor/generatepress
+Description: Child Theme of Wordpress Generate Press
+Author: Emmanuel Zerna
+Author URI: https://emmanuelzerna.com
+Template: generatepress
+Version: 1.0
+*/
+@import url("../generatepress/style.css");
